@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio10</title>
+</head>
+<body>
+    <label>Introduzca su altura en centimetros  </label><input id="altura">
+    <br>
+    <br>
+    <label>Introduzca su edad  </label><input id="edad">
+    <br>
+    <br>
+    <label>Introduzca su sexo  </label><input id="sexo">
+    <br>
+    <br>
+    <label>Introduzca su peso  </label> <input id="peso">
+    <br>
+    <br>
+
+
+    <button id="boton" onclick="calcular()">Calcular</button>
+    <p id="result"></p>
+
+    <script>
+ /*Crear una Fuction, en una pàgina web, donde el usuario introduce su altura (cm), edad, sexo
+ y peso actual. El programa responde con una referencia de peso aproximado.*/
+            let altura1 = document.getElementById('altura')
+            let edad1 = document.getElementById('edad')
+            let sexo1 = document.getElementById('sexo')
+            let peso1 = document.getElementById('peso')
+            let boton1 = document.getElementById('boton')
+            let result1 = document.getElementById('result')
+
+            function calcular(){
+                if(toString(sexo1) == 'H')
+                {
+                    let formula = 50 + ((parseInt(altura1.value) - 150)/4)*3 + ((parseInt(edad1.value) - 20)/4)
+                    result1.innerText = "Su peso actual es de " + peso1.value + "kg y su peso ideal tendria que ser " + formula +'kg'
+                }else if(toString(sexo1)  == 'M')
+                {
+                    let formula = (50 + ((parseInt(altura1.value) - 150) / 4) * 3 + ((parseInt(edad1.value) - 20) / 4))* 0.9
+                    result1.innerText = "Su peso actual es de " + peso1.value + "kg y su peso ideal tendria que ser " + formula + 'kg'
+                }else return result1.innerText = "ingrese su sexo"
+            }
+
+    </script>
+</body>
+</html>

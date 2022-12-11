@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio9</title>
+</head>
+<body>
+    <input id="num1" placeholder="examen 1 (30%)">
+    <input id="num2" placeholder="examen 2 (70%)">
+    <br>
+    <br>
+    <button id="btnCalcular" onclick="promedio()">Calcular</button>
+    
+</body>
+<script>
+/*Realizar programa para una web, en el cual el usuario introduce 2 notas y su valor
+ponderado (como cuando un examen vale un 30% y otro examen el 70%).
+Pulsando el botón “Calcula”, la web muestra como resultado la nota media ponderada
+*/
+let numero1 = document.getElementById('num1')
+let numero2 = document.getElementById('num2')
+let calcular = document.getElementById('btnCalcular')
+let resultado = document.getElementById('resultado')
+
+function promedio(){
+    let total = (parseInt(numero1.value) * 0.30) + (parseInt(numero2.value) * 0.70)
+    alert('Nota media es: '+total)
+}
+
+</script>
+</html>

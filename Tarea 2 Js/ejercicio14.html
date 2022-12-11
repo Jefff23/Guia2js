@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio14</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        Se realiza la carga de 10 valores enteros por teclado. Se desea conocer:
+        b) La cantidad de valores positivos ingresados.
+        c) La cantidad de múltiplos de 15.
+        d) El valor acumulado de los números ingresados que son pares.
+        a) La cantidad de valores negativos ingresados.
+        */
+       
+    let negativo=0
+    let positivo=0
+    let modulo=0
+    let pares=0
+    
+    for (let i = 0; i < 10; i++) {
+        let numero = parseInt(prompt('Digite el numero:'))
+        if (numero<0) {
+            negativo++
+        } 
+         if (numero % 15 === 0 && numero != 0) {
+            modulo++
+        } 
+        if (numero % 2 === 0) {
+            pares= pares + numero
+        } 
+        if (numero>0) {
+            positivo++
+        }else{if(numero===0)
+            alert('agrego numeros 0 ')
+        }
+        
+    }
+    
+    alert('resultados: '+ '\n Negativos: ' + negativo+ ' \n Positivos: ' + positivo + '  \n Multiplos de quince: ' + modulo + ' \n Valor acumulado de los pares: ' + pares )
+    
+    
+    </script>
+</body>
+</html>

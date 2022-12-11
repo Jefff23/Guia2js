@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio11</title>
+</head>
+<body>
+    <label>Intraduzca un numero</label>
+    <input id="number1" >
+    <br>
+    <br>
+    <label>Intraduzca un numero</label>
+    <input id="number2" >
+    <br>
+    <br>
+
+    <label>Intraduzca un numero</label>
+    <input id="number3" >
+    <br>
+    <br>
+    <button onclick="calcular()">Calcular</button>
+
+
+    
+</body>
+<script>
+    
+        /*
+        Realizar programa donde se Introducen de 3 números y el programa indica cuál es el
+        mayor de los 3.
+        */
+        let numero1 = document.getElementById('number1')
+        let numero2 = document.getElementById('number2')
+        let numero3 = document.getElementById('number3')
+        
+
+
+        function calcular(){
+            if(parseInt(numero1.value) > parseInt(numero2.value) && parseInt(numero1.value) > parseInt(numero3.value)){
+                alert('El numero mayor es: ' + numero1.value)
+            } else if (parseInt(numero2.value) > parseInt(numero1.value) && parseInt(numero2.value) > parseInt(numero3.value)){
+                alert('El numero mayor es: ' + numero2.value)     
+            } else if(parseInt(numero3.value) > parseInt(numero1.value) && parseInt(numero3.value) > parseInt(numero2.value)){
+                alert('El numero mayor es: ' + numero3.value)
+            }else{
+                alert('los numeros son iguales')
+            }
+        }
+
+</script>
+</html>

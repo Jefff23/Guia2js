@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio13</title>
+</head>
+<body>
+    <form name="grados">
+        Ingrese grados Celsius: <br>
+        <input type="text" name="valor1" placeholder="Ingrese grados celsius">
+        <br><br>
+        <input type="button" name="button1" value="calcular"  onclick="calcular()">
+        <br>
+        Resultado: <input type="text" name="resultado">
+        <br><br>
+        Ingrese grados Fahrenheit: <br> <input type="text" name="valor2" placeholder="Ingrese grados Fahrenheit">
+        <br><br>
+        <input type="button" name="button2" value="calcular2" onclick="calcular2()">
+        <br>
+        Resultado: <input type="text" name="resultado2"><br>
+    </form>
+    
+    
+    <script>
+        /*
+        a) Crear programa donde se introduce una temperatura en Celsius sale el resultado en Fahrenheit.
+        1) Si ºF está entre 14 y 32, sale la frase “Temperatura baja”
+        2) Si ºF está entre 32 y 68, sale la frase “Temperatura adecuada”
+        3) Si ºF está entre 68 y 96, sale la frase “Temperatura alta”
+        4) Si no está entre ningún caso anterior la frase “Temperatura desconocida”
+        c) Añadir función que recibe ºF introducida por el usuario i sale por pantalla los ºC correspondientes
+        b) Añade una función que recibe como parámetro Fahrenheit y que saca per pantalla las siguientes frases:
+        */
+        function calcular() {
+                let num1,res;
+                num1 = parseInt(document.grados.valor1.value);
+                res = (num1 *(9/5)) + 32 ;
+                document.grados.resultado.value = res + "ºF";
+                
+                if(res >= 14 && res <=32){
+                    alert("Temperatura baja, su temperatura es de " + res + "ºF")
+                } else if(res >= 33 && res <= 68){
+                     alert("Temperatura adecuada, su temperatura es de " + res + "ºF")
+                } else if (res >= 69 && res <= 96) {
+                    alert("Temperatura alta, su temperatura es de " + res + "ºF")
+                } else {
+                    alert("Temperatura desconocida")
+                }
+            }
+        
+        function calcular2(){
+            let num2,res2;
+            num2 = parseInt(document.grados.valor2.value)
+            res = (num2 - 32)*(5/9)
+            document.grados.resultado2.value = res + "ºC";
+        }        
+    </script>
+</body>
+</html>
